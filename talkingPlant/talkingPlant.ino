@@ -61,8 +61,13 @@ void checkMoistureSensor() {
    } else if (moistureState >= 100 && moistureState <= 500) {
     int randomNumber = generateRandomNumber(0, 10);
     lcd.print(thingsToSay[randomNumber]);
+   } else {
+    lcd.print("Sto bene ora!");
    }
    lcd.setCursor(0, 1);
+   for (int i = 0; i < moistureState; i += 75) {
+    lcd.print("~");
+   }
    delay(700);
    lcd.clear();
 }
