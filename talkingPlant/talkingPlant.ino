@@ -21,7 +21,6 @@ Connect LCD to Arduino:
 */
 
 #include <LiquidCrystal.h>
-
 const int moistureSensor = A0;
 LiquidCrystal lcd(12, 11, 10, 5, 4, 3, 2);
 int backLight = 13;
